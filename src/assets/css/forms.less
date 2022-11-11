@@ -1,0 +1,29 @@
+@import "functions.less";
+
+input {
+    border: 1px solid #ddd;
+    color: #222;
+    padding: 2px 4px;
+    font-size: 11px;
+    .border-radius(3px,3px,3px,3px);
+
+    &:active {
+    //    border-style: solid;
+    }
+
+    &[type="submit"], &[type="reset"] {
+        background: #eee;
+        font-weight: bold;
+        padding: 1px 4px;
+        #gradient > .button(#fff, #ddd);
+
+        &:active {
+            #gradient > .button(#ddd, #fff);
+        }
+
+        &:active, &:focus {
+            border-style:inset;
+            border-color:#ddd;
+        }
+    }
+}
